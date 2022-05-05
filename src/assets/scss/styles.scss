@@ -1,0 +1,50 @@
+@use 'base/reset';
+@use 'base/variables';
+@use 'base/typography';
+
+@use 'components/form';
+@use 'components/btn';
+@use 'components/description';
+@use 'components/heading';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin-top: 1.75rem;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+.section {
+  margin-top: 3rem;
+
+  &__heading {
+    margin-bottom: 2.4rem;
+  }
+}

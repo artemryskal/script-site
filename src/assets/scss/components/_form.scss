@@ -1,0 +1,45 @@
+.form {
+  width: 100%;
+  
+  &--header {
+    display: flex;
+    align-items: stretch;
+    background-color: var(--secondary-3);
+    border-radius: 3px;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+
+  &--secondary {
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 10px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: inherit;
+  background-color: var(--secondary-3);
+  line-height: 0.875rem;
+  padding: 15px 14px;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
