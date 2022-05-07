@@ -1,11 +1,17 @@
 <template>
-  <div class="wrapper">
-    <TheAside />
-    <TheHeader />
-    <TheArticle />
-    <AddComment />
-    <CommentsList />
-    <AboutSection />
+  <div>
+    <div class="wrapper">
+      <TheAside />
+      <div>
+        <TheHeader />
+        <main>
+          <TheArticle />
+          <AddComment />
+          <CommentsList />
+          <AboutSection />
+        </main>
+      </div>
+    </div>
     <TheFooter />
   </div>
 </template>

@@ -4,7 +4,10 @@
       What I do!
     </h2>
     <p class="about__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, orci in bibendum luctus, turpis ante pretium velit, eu rutrum augue erat ac eros. Cras ultricies mattis convallis. Nullam non turpis eget sapien mattis eleifend non vel tortor. Maecenas at nibh ipsum. Integer. 
+      Mario Martin's love for storytelling originated as a young boy when he felt inspired to tell stories through writing. At eighteen he shot his first film, “Checkmate.” That was the birthing of his passion for film-making and screenwriting.
+    </p>
+    <p class="about__description">
+      Early on he honed his craft at the Maine Media Workshops and Boston Film & Video Foundation.  Mario has attended many screenwriting boot-camps, worked with multiple coverage companies as well as many different screenwriters.
     </p>
 
     <ShareList />
@@ -23,5 +26,10 @@ export default {
 <style lang="scss" scoped>
 .about__description {
   line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 </style>

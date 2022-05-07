@@ -4,8 +4,13 @@
   &--header {
     display: flex;
     align-items: stretch;
+    width: auto;
     background-color: var(--secondary-3);
     border-radius: 3px;
+
+    @media (min-width: 1024px) {
+      max-width: 256px;
+    }
   }
 }
 

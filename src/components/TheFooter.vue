@@ -1,10 +1,12 @@
 <template>
   <footer class="footer container">
-    <p>Copyright © 2020 Meliora, Inc</p>
-    <ShareList :noLinks="true" />
-    <button class="footer__btn btn" @click="scrollToTop">
-      <img src="@/assets/icons/up.svg" alt="up">
-    </button>
+    <div class="footer__wrapper wrapper">
+      <p>Copyright © 2020 Meliora, Inc</p>
+      <ShareList :noLinks="true" class="footer__share" />
+      <button class="footer__btn btn" @click="scrollToTop">
+        <img src="@/assets/icons/up.svg" alt="up">
+      </button>
+    </div>
   </footer>
 </template>
 
@@ -42,6 +44,23 @@ export default {
     width: 80px;
     height: 63px;
     transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    &__wrapper {
+      margin-top: 0;
+      margin-bottom: 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__share {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
 </style>

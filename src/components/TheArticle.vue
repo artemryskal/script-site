@@ -9,13 +9,17 @@
       </h1>
       <div class="article__info">
         <time datetime="2020-10-24" class="article__info-item description">October 24.2020</time>
-        <span class="article__info-item description">Shane Hobbins</span>
+        <a href="#" class="article__info-item description">Shane Hobbins</a>
       </div>
     </header>
 
-    <img src="@/assets/images/article-img.png" alt="Article cover" class="article__cover">
+    <picture>
+      <source media="(max-width: 425px)" srcset="@/assets/images/article-img-320w.png">
+      <source media="(min-width: 426px)" srcset="@/assets/images/article-img-733w.png">
+      <img src="@/assets/images/article-img-733w.png" alt="Article cover" class="article__cover">
+    </picture>
 
-    <section class="article__text container">
+    <div class="article__text container">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis sagittis sem ac porta. Sed commodo ligula vitae mollis tristique. Maecenas egestas semper mauris. Duis tempus blandit ultrices. Proin elit nulla, viverra id suscipit quis, tristique a dolor. Sed dapibus, orci ac luctus tincidunt, massa erat porttitor odio, non imperdiet dui risus et elit.
       </p>
@@ -48,7 +52,7 @@
           </li>
         </ul>
       </section>
-    </section>
+    </div>
 
     <ul class="article__tags container">
       <li class="article__tags-item">
@@ -92,6 +96,7 @@ export default {
       padding-right: 0.5rem;
       margin-right: 0.5rem;
       border-right: 1px solid var(--secondary-2);
+      text-decoration: none;
       
       &:last-child {
         margin-right: 0;
