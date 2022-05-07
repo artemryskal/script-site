@@ -10,17 +10,17 @@
           {{ item.name }}
         </a>
         <template v-else>
-          <button aria-expanded="false" class="nav__link nav__link--list btn link" >
+          <button @click="toggleList" aria-expanded="false" class="nav__link nav__link--list btn link" >
             {{ item.name }}
             <img src="@/assets/icons/arrow-bottom.svg" alt="ico" class="nav__ico">
           </button>
-          <!-- <ul class="nav__list">
-            <li v-for="(link, i) in item.list" :key="i" class="nav__item">
+          <ul class="nav__list nav__list--inner">
+            <li v-for="(link, i) in item.list" :key="i" class="nav__item nav__item--inner">
               <a :href="link.href" class="nav__link link">
                 {{ link.name }}
               </a>
             </li> 
-          </ul> -->
+          </ul>
         </template>
       </li>
     </ul>
@@ -63,6 +63,10 @@ export default {
   margin-bottom: 3rem;
   text-align: right;
 
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+  }
+
   &__btn {
     padding: 9px 4px;
 
@@ -80,11 +84,7 @@ export default {
       display: flex;
       justify-content: space-between;
       max-height: none;
-    }
-
-    & & {
-      flex-direction: column;
-      max-height: 0;
+      overflow: visible;
     }
 
     &.active {
@@ -92,14 +92,31 @@ export default {
       transition: max-height 0.5s;
     }
   }
+
+  &__list--inner {
+    @media (min-width: 1024px) {
+      position: absolute;
+      top: 100%;
+      flex-direction: column;
+      width: max-content;
+      max-height: 0;
+      background-color: var(--secondary-4);
+      overflow: hidden;
+    }
+  }
   
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     @media (min-width: 1024px) {
       margin-right: 2.8rem;
+    }
+
+    &--inner {
+      margin-right: 0;
     }
   }
 
@@ -139,7 +156,7 @@ export default {
   }
 
   &__link[aria-expanded=true] &__ico {
-    transform: rotate(180deg)
+    transform: scaleY(-1)
   }
 }
 </style>
