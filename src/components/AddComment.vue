@@ -1,7 +1,7 @@
 <template>
   <section class="add-comment container section">
     <h2 class="section__heading heading heading--h2">
-      Add a Comment      
+      Add a Comment
     </h2>
 
     <form action="#" method="POST" class="form">
@@ -35,3 +35,11 @@ export default {
   name: 'AddComment'
 }
 </script>
+
+<style scoped>
+@media print {
+  .add-comment {
+    display: none;
+  }
+}
+</style>

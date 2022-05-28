@@ -54,35 +54,39 @@ export default {
 
 <style lang="scss" scoped>
 .share {
-    margin-top: 3rem;
-    padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem;
 
-    &__explore {
-      display: flex;
-      column-gap: 1rem;
-      align-items: center;
-      margin-bottom: 27px;
-    }
+  &__explore {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    margin-bottom: 27px;
+  }
 
-    &__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--secondary-3);
-      padding: 6px 8px;
-    }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-3);
+    padding: 6px 8px;
+  }
 
-    &__list {
-      display: flex;
-      align-items: center;
-    }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
 
-    &__item {
-      margin-right: 24px;
+  &__item {
+    margin-right: 24px;
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+    &:last-of-type {
+      margin-right: 0;
     }
   }
+
+  @media print {
+    display: none;
+  }
+}
 </style>

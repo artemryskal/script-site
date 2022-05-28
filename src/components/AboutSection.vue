@@ -24,6 +24,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.about {
+  @media print {
+    margin-bottom: 2rem;
+  }
+}
+
 .about__description {
   line-height: 1.5rem;
   margin-bottom: 1.5rem;

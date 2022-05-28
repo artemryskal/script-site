@@ -132,6 +132,10 @@ export default {
 
   &__reply {
     margin-bottom: 2rem;
+
+    @media print {
+      display: none;
+    }
   }
 }
 </style>

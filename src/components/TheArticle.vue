@@ -97,7 +97,7 @@ export default {
       margin-right: 0.5rem;
       border-right: 1px solid var(--secondary-2);
       text-decoration: none;
-      
+
       &:last-child {
         margin-right: 0;
         padding-right: 0;
@@ -150,10 +150,18 @@ export default {
     display: flex;
     column-gap: 4px;
     margin-top: 2.8rem;
+
+    @media print {
+      display: none;
+    }
   }
 
   &__share {
     border-bottom: 1px solid var(--secondary-2);
+  }
+
+  @media print {
+    margin-top: 0;
   }
 }
 </style>
