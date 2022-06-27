@@ -93,6 +93,7 @@ export default {
     display: flex;
     padding-top: 1.5rem;
     border-bottom: 1px solid var(--secondary-2);
+    page-break-inside: avoid;
 
     &:first-of-type {
       padding-top: 0;
