@@ -1,4 +1,8 @@
 @media print {
+  * {
+    color: #000 !important;
+  }
+
   a[href]:after {
     content: ' (' attr(href) ')';
   }

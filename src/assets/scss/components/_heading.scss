@@ -7,4 +7,12 @@
     font-size: 1.1875rem;
     line-height: 1.75rem;
   }
+
+  @media print {
+    font-size: 0.9cm;
+
+    &--h2 {
+      font-size: 0.7cm;
+    }
+  }
 }

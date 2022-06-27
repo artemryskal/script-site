@@ -162,6 +162,11 @@ export default {
 
   @media print {
     margin-top: 0;
+
+    &__text,
+    &__list {
+      font-size: 0.5cm;
+    }
   }
 }
 </style>
